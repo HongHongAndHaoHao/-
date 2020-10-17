@@ -90,7 +90,7 @@
         function setTime(tag){
             var time = document.getElementById(tag);
             var ti0 = new Date();
-            time.innerHTML ='2020-' +  (ti0.getMonth()+1) + '-' + ti0.getDate() + '-' +
+            time.innerHTML ='2020-' +  (ti0.getMonth()+1) + '-' + ti0.getDate() + ' ' +
             ti0.getHours() + ':' + ti0.getMinutes();  
         }
         setTime('time');
