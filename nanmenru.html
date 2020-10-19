@@ -75,18 +75,26 @@
     <div id='time3'></div>
     </div>
     <script type="text/javascript">
+        var format = (timeStr) => {
+                if(parseInt(timeStr) >= 10){
+                    return timeStr;
+                }
+                else{
+                    return '0' + timeStr;
+                }
+        }
         function setTime(tag){
             var time = document.getElementById(tag);
             var ti0 = new Date();
-            time.innerHTML ='2020-' +  (ti0.getMonth()+1) + '-' + ti0.getDate() + '-' +
-            ti0.getHours() + ':' + ti0.getMinutes();  
+            time.innerHTML ='2020-' +  format((ti0.getMonth()+1)) + '-' + format(ti0.getDate()) + ' ' +
+            format(ti0.getHours()) + ':' + format(ti0.getMinutes());  
         }
         setTime('time');
         setTime('time2');
         var time3 = document.getElementById('time3');
         var ti0 = new Date();
         time3.innerHTML = '2020-'+  (ti0.getMonth()+1) + '-' + ti0.getDate()
-        +' 09:30';
+        +' 11:30';
         var checkOut = document.getElementById('checkOut');
         checkOut.onclick = ()=>{
             this.location = 'http://wz.hitwh.edu.cn/common/casLogin?params=L3d6c2IvYXBwP2x5PWRiMTM2NDg2Mzg2NzQxMjc4NWQ0MWEzM2ZmZGM3ZWMxJmRkPTAwMDAwJnp3aD0wMDAwMA=='
