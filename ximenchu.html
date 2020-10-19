@@ -88,12 +88,21 @@
     <div id='time2'></div>
     </div>
     <script type="text/javascript">
+        var format = (timeStr) => {
+                if(parseInt(timeStr) >= 10){
+                    return timeStr;
+                }
+                else{
+                    return '0' + timeStr;
+                }
+        }
         function setTime(tag){
             var time = document.getElementById(tag);
             var ti0 = new Date();
-            time.innerHTML ='2020-' +  (ti0.getMonth()+1) + '-' + ti0.getDate() + '-' +
-            ti0.getHours() + ':' + ti0.getMinutes();  
+            time.innerHTML ='2020-' +  format((ti0.getMonth()+1)) + '-' + format(ti0.getDate()) + ' ' +
+            format(ti0.getHours()) + ':' + format(ti0.getMinutes());  
         }
+        
         setTime('time');
         setTime('time2');
         var checkOut = document.getElementById('checkOut');
