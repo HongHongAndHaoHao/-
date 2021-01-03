@@ -86,14 +86,14 @@
         function setTime(tag){
             var time = document.getElementById(tag);
             var ti0 = new Date();
-            time.innerHTML ='2020-' +  format((ti0.getMonth()+1)) + '-' + format(ti0.getDate()) + ' ' +
-            format(ti0.getHours()) + ':' + format(ti0.getMinutes()+3);  
+            time.innerHTML ='2021-' +  format((ti0.getMonth()+1)) + '-' + format(ti0.getDate()) + ' ' +
+            format(ti0.getHours()) + ':' + format(ti0.getMinutes());  
         }
         setTime('time');
         setTime('time2');
         var time3 = document.getElementById('time3');
         var ti0 = new Date();
-        time3.innerHTML = '2020-'+  (ti0.getMonth()+1) + '-' + ti0.getDate()
+        time3.innerHTML = '2021-'+  (ti0.getMonth()+1) + '-' + ti0.getDate()
         +' 11:30';
         var checkOut = document.getElementById('checkOut');
         checkOut.onclick = ()=>{
